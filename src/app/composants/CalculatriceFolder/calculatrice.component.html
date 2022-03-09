@@ -1,0 +1,26 @@
+<div class="bodyCalcul">
+    <div>
+        <input type="text" class="Inputmargin" [(ngModel)]="textElement">
+        <input type="text" class="Inputmargin" [(ngModel)]="textElementSecond">    
+    </div>
+    <div></div>
+    <div>
+        <label class="btn-primary MgL" ngbButtonLabel>
+            <input type="checkbox" class="btn-check" ngbButton (click)="AdditionCalcul()"> +
+        </label>
+        <label class="btn-primary MgL" ngbButtonLabel>
+            <input type="checkbox" class="btn-check" ngbButton (click)="SoustraireCalcul()"> -
+        </label>
+        <label class="btn-primary MgL" ngbButtonLabel>
+            <input type="checkbox" class="btn-check" ngbButton (click)="MultiplierCalcul()"> *
+        </label>
+        <label class="btn-primary MgL" ngbButtonLabel>
+            <input type="checkbox" class="btn-check" ngbButton (click)="DiviserCalcul()"> /
+        </label> 
+    </div>
+    <div>&nbsp;</div>
+    <div>
+        <h4> Result : {{ result }}</h4>
+    </div>
+    
+</div>

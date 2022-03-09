@@ -1,0 +1,79 @@
+<div ng-app="myApp" ng-controller="myController" class="container">
+    <form novalidate [formGroup]="profilForm" name="myForm" (ngSubmit)="onSubmit()" >
+        <fieldset>
+            <div class="login-container">
+                <div class="row">
+
+                        <!-- Email Input and Validate -->
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email"  name="email" required class="form-control" formControlName="email">
+                            <div *ngIf="myEmail?.invalid && myEmail?.dirty && myEmail?.touched">
+                                <div *ngIf=" myEmail.errors?.['required']" class="alert alert-danger">
+                                    Email's required
+                                </div>
+                                <div *ngIf="myEmail.errors?.['pattern']" class="alert alert-danger">
+                                    Email's format Invalid
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <!-- Firstname Input and Validate -->
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Firstname</label>
+                            <input type="text" name="pass" required class="form-control" formControlName="firstname">
+                            <div *ngIf="myFirstname?.invalid && myFirstname?.dirty && myFirstname?.touched">
+                                <div *ngIf="myFirstname.errors?.['required']" class="alert alert-danger">
+                                    Firstname's required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <!-- Lastname Input and Validate -->
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Lastname</label>
+                            <input type="text" name="lastname" required class="form-control" formControlName="lastname">
+                            <div *ngIf="myLastname?.invalid && myLastname?.dirty && myLastname?.touched">
+                                <div *ngIf="myLastname.errors?.['required']" class="alert alert-danger">
+                                    Lastname's required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <!-- Password Input and Validate -->
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="pass" required class="form-control" formControlName="password">
+                            <div *ngIf="myPassword?.invalid && myPassword?.dirty && myPassword?.touched">
+                                <div *ngIf="myPassword.errors?.['required']" class="alert alert-danger">
+                                    Password's required.
+                                </div>   
+                                <div *ngIf="myPassword.errors?.['minlength']" class="alert alert-danger">
+                                    Password's needed 8 caract.
+                                </div>     
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <br>
+                            <button type="submit" [disabled]="profilForm.invalid" class="btn btn-success pull-right">Login</button>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+  </div>

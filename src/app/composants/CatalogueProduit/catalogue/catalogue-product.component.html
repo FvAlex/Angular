@@ -1,0 +1,8 @@
+<ul>
+  <app-products
+    (remove)="DeleteProduct($event)" 
+    [product]="product" 
+    *ngFor="let product of catalogues" 
+  >
+  </app-products>
+</ul>

@@ -1,0 +1,23 @@
+<div class="div_product">
+    <ol>
+        <ng-container *ngFor="let product of catalogues">
+            <li *ngIf="product.price == undefined" class="product">
+                <p>Nom : {{ product.name }}</p>
+            </li>
+        </ng-container>
+    </ol>
+    <ol>
+        <ng-container *ngFor="let product of catalogues">
+            <li *ngIf="product.promo != undefined" class="product">
+                <p>Nom : {{ product.name }} - {{ product.price }} - {{ product.promo }}</p>
+            </li>
+        </ng-container>
+    </ol>
+    <ol>
+        <ng-container *ngFor="let product of catalogues">
+            <li *ngIf="product.promo == undefined && product.price != undefined" class="product">
+                <p>Nom : {{ product.name }} - {{ product.price }} </p>
+            </li>
+        </ng-container>
+    </ol>
+</div>

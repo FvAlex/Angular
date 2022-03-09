@@ -1,0 +1,9 @@
+<fieldset>
+</fieldset>
+<form [formGroup]="profilForm" name="myForm" (ngSubmit)="onSubmit()">
+    <fieldset>
+        <input type="text" formControlName="ville">
+        <button type="submit">Search</button>
+        <p> Ville : {{ profilForm }}</p>
+    </fieldset>
+</form>

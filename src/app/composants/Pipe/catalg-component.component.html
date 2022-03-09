@@ -1,0 +1,9 @@
+<div class="product_div">
+    <div class="product" *ngFor="let product of catalogues">
+        <h2>{{ product.name }}</h2>
+        <div>
+            <h3>Prix : {{ product.price }} €</h3>
+            <h5>Description : {{ product.description | truncate: 40 }}</h5>
+        </div>
+    </div>
+</div>
