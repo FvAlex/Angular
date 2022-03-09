@@ -7,7 +7,7 @@ import { FormComponent } from './composants/form/form.component';
 import { ListStudentComponent } from './composants/list-student/list-student.component';
 import { LoginComponent } from './composants/login/login.component';
 import { MeteoComponentComponent } from './composants/meteo-component/meteo-component.component';
-import { PipeComponentComponent } from './composants/Pipe/catalg-component.component';
+import { PipeComponentComponent } from './composants/pipeComponent/catalg-component.component';
 
 const appRoutes: Routes = [
   {

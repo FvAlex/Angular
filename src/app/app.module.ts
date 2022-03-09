@@ -12,10 +12,10 @@ import { ProductsComponent } from './composants/CatalogueProduit/products/produc
 import { ListStudentComponent } from './composants/list-student/list-student.component';
 import { CatalogComponentComponent } from './composants/Directive/catalog-component.component';
 import { LoginComponent } from './composants/login/login.component';
-import { PipeComponentComponent } from './composants/Pipe/catalg-component.component';
+import { PipeComponentComponent } from './composants/pipeComponent/catalg-component.component';
 import { FormComponent } from './composants/form/form.component';
-import { PercentagePipe } from './percentage.pipe';
-import { TruncatePipe } from './truncate.pipe';
+import { PercentagePipe } from './Pipe/percentage.pipe';
+import { TruncatePipe } from './Pipe/truncate.pipe';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MeteoComponentComponent } from './composants/meteo-component/meteo-component.component';
 
